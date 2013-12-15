@@ -58,6 +58,15 @@ body {
 /* For this project, I used "inspect element" 
 to determine the font sizes and colors.  The rest, e.g., padding and margins, is guesswork. */
 
+.body {
+	position: relative;
+}
+
+.bigbox {
+	width: 1000px;
+	margin: auto auto;
+}
+
 .nav {
 	height: 60px;
 	font-family: Arial, sans-serif;
@@ -79,6 +88,11 @@ to determine the font sizes and colors.  The rest, e.g., padding and margins, is
 	padding: 5px;
 	margin: 0px 5px;
 }
+
+li:nth-child(5) a.signIn {
+	color: #18afe0;
+}
+
 
 .nav li a:link {
 	color: #369;
@@ -107,34 +121,9 @@ to determine the font sizes and colors.  The rest, e.g., padding and margins, is
 	color: green;
 }
 
-#box img {
-	display: inline-block;
-	margin: 0px auto 20px auto;
-}
-
-section {
+.box {
 	display: block;
-}
-
-.hide {
-	display: none;
-}
-
-.arrow ul li {
-	position: relative;
-	width: 70px;
-	display: inline-block;
-	border: 2px transparent;
-	padding: 5px;
-	margin-top: 10px;
-}
-
-.arrow-1 img, .arrow-2 img, .arrow-3 img {
-	z-index: 2;
-}
-
-.arrow-1 img, .arrow-2 img {
-	margin-bottom: -100;
+	height: 230px;
 }
 
 h1 {
@@ -163,15 +152,40 @@ h4 {
 	color: #222;
 }
 
+.hide {
+	display: none;
+}
+
+.arrow-1 {
+	z-index: 100;
+	position: absolute;
+	margin-left: -170px;
+	margin-bottom: -10px;
+}
+
+.arrow-2 {
+	z-index: 100;
+	position: absolute;
+	margin-left: 35px;
+	margin-bottom: -10px;
+}
+
+.arrow-3 {
+	z-index: 100;
+	position: absolute;
+	margin-left: 115px;
+	margin-bottom: -10px;
+}
+
 .products {
 	margin: 0px auto;
+	position: relative;
 }
 
 .products ul li {
 	display: inline-block;
 	/* All of the following from CSS Gradient Background Maker */
 	/* IE10 Consumer Preview */ 
-	z-index: -2;
 	background-image: -ms-linear-gradient(top left, #FFFFFF 0%, #EFEFEF 100%);
 	/* Mozilla Firefox */ 
 	background-image: -moz-linear-gradient(top left, #FFFFFF 0%, #EFEFEF 100%);
